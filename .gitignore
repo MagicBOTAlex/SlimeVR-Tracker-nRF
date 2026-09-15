@@ -2,6 +2,7 @@
 *.swp
 *~
 
+.ncs/
 # build
 /build*/
 .cache
