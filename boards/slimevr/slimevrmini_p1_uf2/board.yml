@@ -3,6 +3,7 @@
 
 board:
   name: slimevrmini_p1_uf2
+  full_name: SlimeVR Mini P1 UF2
   vendor: slimevr
   socs:
     - name: nrf52833

@@ -31,6 +31,10 @@ const char* sensor_get_sensor_fusion_name(void);
 
 int sensor_get_sensor_temperature(float *);
 
+#if CONFIG_SENSOR_USE_TCAL_MANUAL_POLYNOMIAL
+float sensor_get_current_imu_temperature(void);
+#endif
+
 int sensor_request_scan(bool force);
 
 void sensor_scan_read(void);

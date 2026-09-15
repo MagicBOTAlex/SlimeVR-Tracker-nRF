@@ -193,9 +193,16 @@ int sensor_get_sensor_temperature(float *ptr)
 		else
 			return -1; // imu probably not scanned yet or temp not read yet or last valid temp is old
 	}
-	&ptr = temp;
+	*ptr = temp;
 	return 0;
 }
+
+#if CONFIG_SENSOR_USE_TCAL_MANUAL_POLYNOMIAL
+float sensor_get_current_imu_temperature(void)
+{
+	return sensor_tcal_temp;
+}
+#endif
 
 void sensor_scan_thread(void)
 {
